@@ -12,4 +12,8 @@ class Products_model extends CI_model
         $result = $query->result();
         return $result;
     }
+    public function saveProduct($data){
+        //saves the product into the database
+        $this->db->insert('tblproducts', $data);
+    }
 }

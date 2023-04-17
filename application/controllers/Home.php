@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->helper('url');
 		$this->load->model('Products_model');
-		//$data['products'] = $this->Products_model->getAllProducts();
+		$data['products'] = $this->Products_model->getAllProducts();
 		$data['title'] = "View All Products";
 		$this->load->view('include/header_view', $data);
 		$this->load->view('products_view', $data);
